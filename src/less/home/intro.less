@@ -1,0 +1,206 @@
+.intro {
+	background-color: @blue-light;
+	padding-top: 36px;
+	padding-bottom: 84px;
+
+	.sm-block({
+		padding-bottom: 30px;
+	});
+
+	&__header {
+		display: flex;
+		align-items: center;
+
+		&Logo {
+			margin-right: 44px;
+
+			.xs-block({
+				margin-right: 20px;
+			});
+		}
+	}
+
+	&__title {
+		line-height: 47px;
+
+		.sm-block({
+			line-height: 30px;
+		});
+
+		.xs-block({
+			font-size: 20px;
+			line-height: 26px;
+		});
+	}
+
+	&__caption {
+		&--desktop {
+			.xs-block({
+				display: none;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.xs-block({
+				display: block;
+				text-align: center;
+			});
+		}
+	}
+
+	&__slider {
+		margin-top: 42px;
+
+		.md-block({
+			margin: 40px auto 0;
+			max-width: 690px;
+			position: relative;
+		});
+
+		&Item {
+			display: flex;
+
+			.md-block({
+				flex-wrap: wrap;
+				justify-content: center;
+			});
+
+			&--eco {
+				.intro__sliderImg::after {
+					content: '';
+					width: 102px;
+					height: 102px;
+					background: url(../img/eco.png) no-repeat center / contain;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					transform: translate(30%, 30%);
+
+					.md-block({
+						width: 70px;
+						height: 70px;
+					});
+				}
+			}
+		}
+
+		&Img {
+			width: 100%;	
+			max-width: 690px;
+			margin-right: 108px;
+			position: relative;
+
+			.md-block({
+				margin-right: 0;
+			});
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 10px;
+			}
+		}
+
+		&Gost {
+			.md-block({
+				position: absolute;
+				top: 0;
+				right: 0;
+			});
+		}
+
+		&Info {
+			min-width: 456px;
+
+			.md-block({
+				min-width: 100%;
+			});
+		}
+
+		&Title {
+			margin-top: 34px;
+			line-height: 47px;
+
+			.sm-block({
+				margin-top: 14px;
+			});
+
+			.xs-block({
+				line-height: 28px;
+			});
+		}
+
+		&List {
+			margin-top: 26px;
+			font-weight: 500;
+
+			.sm-block({
+				margin-top: 20px;
+			});
+
+			li {
+				list-style: disc inside;
+				line-height: 31px;
+			}
+		}
+
+		&Price {
+			margin-top: 34px;
+			font-size: 32px;
+			line-height: 30px;
+			font-weight: 700;
+
+			.sm-block({
+				text-align: center;
+			});
+
+			span {
+				color: @red;
+			}
+		}
+
+		&More {
+			margin-top: 20px;
+			width: 100%;
+			max-width: 380px;
+			text-align: center;
+			font-size: 24px;
+			line-height: 58px;
+			height: 60px;
+
+			.sm-block({
+				display: block;
+				margin: 20px auto;
+				text-align: center;
+			});
+		}
+	}
+
+	&__offer {
+		display: flex;
+		margin-top: 50px;
+
+		.sm-block({
+			justify-content: center;
+		});
+
+		&Img {
+			margin-right: 20px;
+		}
+
+		&Text {
+			text-align: center;
+			font-size: 18px;
+			line-height: 30px;
+
+			strong {
+				display: block;
+				font-size: 24px;
+				font-weight: 700;
+			}
+		}
+	}
+}

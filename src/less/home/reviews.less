@@ -1,0 +1,100 @@
+.reviews {
+	padding: 112px 0 128px;
+
+	&__list {
+		margin-top: 32px;
+		display: flex;
+		gap: 50px;
+
+		.slick-slide {
+			padding: 0 15px;
+
+			.sm-block({
+				padding: 0 5px;
+			});
+		}
+	}
+
+	&__dots {
+		margin-top: 34px;
+
+		.sm-block({
+			margin-top: 24px;
+		});
+
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+
+			li {
+				margin: 0 6px;
+
+				button {
+					width: 16px;
+					height: 16px;
+					background-color: #E7EEF4;
+					border: 2px solid #E7EEF4;
+					border-radius: 50%;
+					font-size: 0;
+				}
+
+				&.slick-active button{
+					border-color: #D5E1ED;
+				}
+			}
+		}
+	}
+}
+
+.review {
+	padding: 35px 50px 30px;
+	background-color: @blue-light;
+	border-radius: 14px;
+	position: relative;
+
+	.xs-block({
+		padding: 30px 10px 20px;
+	});
+
+	&__head {
+		display: flex;
+		align-items: center;
+
+		.xs-block({
+			margin-top: 10px;
+		});
+	}
+
+	&__img {
+		width: 54px;
+		height: 54px;
+	}
+
+	&__name {
+		margin-left: 16px;
+		font-weight: 700;
+	}
+
+	&__score {
+		margin-left: auto;
+		width: calc(27px * 5);
+		height: 25px;
+		background: url(../img/icon-star.png) repeat-x / contain;
+
+		.xs-block({
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		});
+	}
+
+	&__body {
+		margin-top: 32px;
+		font-size: 14px;
+		line-height: 22px;
+
+		.xs-block({
+			margin-top: 14px;
+		});
+	}
+}
