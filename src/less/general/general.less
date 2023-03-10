@@ -126,3 +126,25 @@ ul, ol {
 		}
 	}
 }
+
+.breadcrumbs {
+	padding: 18px 0;
+	
+	&__wrapper {
+		display: flex;
+	}
+
+	a {
+		color: @red;
+		font-weight: 700;
+
+		&[href] {
+			font-weight: 500;
+
+			&::after {
+				content: '/';
+				margin: 0 8px;
+			}
+		}
+	}
+}

@@ -1,0 +1,272 @@
+.singleProject {
+	&__title {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	&__main {
+		.row-flex();
+
+		margin-top: 24px;
+	}
+
+	&__slider {
+		.col();
+		.size(4.5);
+	}
+
+	&__content {
+		.col();
+		.size(7.5);
+		.row-flex();
+	}
+
+	&__section {
+		.col();
+
+		margin-bottom: 36px;
+
+		&Title {
+			margin-bottom: 14px;
+			color: @red;
+			font-weight: 600;
+
+			&--black {
+				color: @black;
+			}
+		}
+
+		&--props {
+			.size(4);
+		}
+
+		&--order {
+			.size(8);
+
+			text-align: right;
+		}
+
+		&--desc {
+			.size(8);
+		}
+
+		&--options {
+			.size(4);
+		}
+
+		&--decor {
+			.size(4.5);
+		}
+
+		&--panel {
+			.size(4.5);
+		}
+
+		&--suitable {
+			.size(3);
+		}
+	}
+
+	&__prop {
+		line-height: 32px;
+
+		strong {
+			padding: 1px 6px;
+			color: @white;
+			background-color: @black;
+			border-radius: 3px;
+		}
+
+		&--sep {
+			margin-top: 20px;
+		}
+	}
+
+	&__price {
+		font-size: 28px;
+		line-height: 34px;
+		font-weight: 700;
+		color: @red;
+
+		&Vars {
+			margin-top: 18px;
+		}
+
+		&Var {
+			line-height: 30px;
+
+			&--red {
+				color: @red;
+			}
+
+			strong {
+				padding: 1px 6px;
+				color: @black;
+				background-color: #ECECEC;
+				border-radius: 3px;
+			}
+		}
+	}
+
+	&__order {
+		margin-top: 30px;
+		height: 40px;
+		padding: 0 20px;
+		font-size: 16px;
+		line-height: 38px;
+	}
+
+	&__desc {
+		text-align: justify;
+		font-size: 14px;
+		line-height: 24px;
+		padding-bottom: 26px;
+		position: relative;
+
+		b, strong {
+			font-weight: 700;
+		}
+
+		&More {
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 600;
+			color: @red;
+			text-decoration: underline;
+			background: none;
+			border: none;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+
+	&__options {
+		padding: 14px 10px;
+		background-color: @blue-light;
+		border-radius: 14px;
+	}
+
+	&__option {
+		display: inline-flex;
+		align-items: center;
+		line-height: 24px;
+		font-weight: 600;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: inline-flex;
+			flex-shrink: 0;
+			width: 32px;
+			height: 32px;
+			margin-right: 14px;
+			border: 1px solid @red;
+			border-radius: 50%;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__additional {
+		.row-flex();
+	}
+
+	&__decor {
+		display: flex;
+		text-align: center;
+		position: relative;
+		margin: 0 -6px 14px;
+
+		input[type=radio] {
+			display: none;
+			// &:checked ~ label {
+			// 	.singleProject__decorTitle {
+			// 		color: @red;
+			// 	}
+			// }
+		}
+
+		&Option {
+			margin: 0 6px;
+			cursor: pointer;
+		}
+
+		&Title {
+			font-size: 14px;
+			line-height: 32px;
+			font-style: italic;
+			color: @black;
+		}
+	}
+
+	&__panel {
+		margin-bottom: 26px;
+
+		&Thick {
+			display: flex;
+		}
+
+		&Caption {
+			text-align: center;
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			font-size: 10px;
+			line-height: 30px;
+
+			strong {
+				color: @red;
+				font-size: 14px;
+				line-height: 24px;
+				font-weight: 600;
+			}
+		}
+
+		&Text {
+			margin-left: 16px;
+			font-size: 14px;
+			line-height: 24px;
+			text-align: justify;
+		}
+
+		&Type {
+			padding: 0 6px;
+			font-size: 18px;
+			line-height: 30px;
+			color: @red;
+			font-weight: 600;
+			background-color: transparent;
+			border: 2px solid @red;
+			border-radius: 7px;
+
+			&--big {
+				font-size: 22px;
+				line-height: 32px;
+			}
+		}
+	}
+
+	&__panels {
+		display: flex;
+		gap: 5px;
+	}
+
+	&__suitable {
+		font-size: 14px;
+		line-height: 16px;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			display: inline-block;
+			padding: 2px 6px;
+			margin-right: 8px;
+			margin-bottom: 8px;
+			background-color: #ECECEC;
+			border-radius: 3px;
+		}
+	}
+}
