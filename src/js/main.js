@@ -34,4 +34,37 @@ $(function(){
 
 		$('html').toggleClass('openMenu');
 	});
+
+	$(".singleProject__sliderMain").slick({
+		slidesToShow: 1,
+		arrows: false,
+		asNavFor: ".singleProject__sliderNav",
+		fade: true,
+		draggable: false,
+	});
+
+	$(".singleProject__sliderNav").slick({
+		slidesToShow: 4,
+		arrows: false,
+		asNavFor: ".singleProject__sliderMain",
+		focusOnSelect: true,
+		draggable: false,
+	});
+
+	$(".singleProject__slider").addClass("singleProject__slider--loaded");
+
+	$('.singleProject__panel').slick({
+		slidesToShow: 1,
+		arrows: false,
+		fade: true,
+		draggable: false,
+		swipe: false
+	});
+
+	$(".singleProject__panels").slick({
+		slidesToShow: 4,
+		arrows: false,
+		asNavFor: ".singleProject__panel",
+		focusOnSelect: true
+	});
 });

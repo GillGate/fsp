@@ -9,12 +9,12 @@
 <body>
 	<header id="header" class="header">
 		<div class="container header__wrapper">
-			<div class="header__logo">
+			<a href="/" class="header__logo">
 				<div class="header__logoImg">
 					<img src="img/header-logo.png" alt="">
 				</div>
 				<span class="header__logoText">Строим с 2008</span>
-			</div>
+			</a>
 			<div class="header__nav">
 				<div class="header__bar"><span></span></div>
 				<nav class="nav header__navBody">
@@ -34,7 +34,7 @@
 
 	<div class="breadcrumbs">
 		<div class="container breadcrumbs__wrapper">
-			<a href="#">Главная</a>
+			<a href="/">Главная</a>
 			<a href="#">Каталог проектов</a>
 			<a>Проекты домов</a>
 		</div>
@@ -46,15 +46,49 @@
 			<div class="singleProject__main">
 				<div class="singleProject__slider">
 					<div class="singleProject__sliderMain">
-						<img src="img/singleProject-slider-img.jpg" alt="">
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/house.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/house.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
 					</div>
-					<div class="singleProject__sliderNav"></div>
+					<div class="singleProject__sliderNav">
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/popular-example.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/popular-example.jpg" alt="">
+						</div>
+						<div>
+							<img src="img/singleProject-slider-img.jpg" alt="">
+						</div>
+					</div>
 				</div>
 				<h2 class="vh">Подробнее</h2>
 				<div class="singleProject__content">
 					<div class="singleProject__section singleProject__section--props">
 						<h3 class="singleProject__sectionTitle">Характеристики:</h3>
 						<ul class="singleProject__props">
+							<li class="singleProject__prop">
+								Стиль:
+								<strong>A-Frame</strong>
+							</li>
 							<li class="singleProject__prop">
 								Размеры:
 								<strong>8х12 м</strong>
@@ -120,50 +154,50 @@
 				<div class="singleProject__section singleProject__section--decor">
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Варианты внешней отделки (любой цвет):</h3>
 					<div class="singleProject__decor">
-						<input type="radio" name="decor-ext" id="decor-ext-1">
+						<input type="radio" name="decor-ext" id="decor-ext-1" class="vh" checked>
 						<label for="decor-ext-1" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
-								<img src="img/dec-ext-1.jpg" alt="Образец профлиста">
+								<img src="img/dec-ext-1.jpg" draggable="false" alt="Образец профлиста">
 							</div>
 							<p class="singleProject__decorTitle">Профлист</p>
 						</label>
-						<input type="radio" name="decor-ext" id="decor-ext-2">
+						<input type="radio" name="decor-ext" id="decor-ext-2" class="vh">
 						<label for="decor-ext-2" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
-								<img src="img/dec-ext-2.jpg" alt="Образец кликфальца">
+								<img src="img/dec-ext-2.jpg" draggable="false" alt="Образец кликфальца">
 							</div>
 							<p class="singleProject__decorTitle">Кликфальц</p>
 						</label>
-						<input type="radio" name="decor-ext" id="decor-ext-3">
+						<input type="radio" name="decor-ext" id="decor-ext-3" class="vh">
 						<label for="decor-ext-3" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
-								<img src="img/dec-ext-3.jpg" alt="Образец имитации бруса">
+								<img src="img/dec-ext-3.jpg" draggable="false" alt="Образец имитации бруса">
 							</div>
 							<p class="singleProject__decorTitle">Имитация бруса</p>
 						</label>
 					</div>
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Варианты внутренней отделки (любой цвет):</h3>
 					<div class="singleProject__decor">
-						<input type="radio" name="decor-in" id="decor-in-1">
+						<input type="radio" name="decor-in" id="decor-in-1" class="vh" checked>
 						<label for="decor-in-1" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
-								<img src="img/dec-in-1.jpg" alt="Образец профлиста">
+								<img src="img/dec-in-1.jpg" draggable="false" alt="Образец профлиста">
 							</div>
-							<p class="singleProject__decorTitle">Профлист</p>
+							<p class="singleProject__decorTitle">Плитка</p>
 						</label>
-						<input type="radio" name="decor-in" id="decor-in-2">
+						<input type="radio" name="decor-in" id="decor-in-2" class="vh">
 						<label for="decor-in-2" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
-								<img src="img/dec-in-2.jpg" alt="Образец кликфальца">
-							</div>
-							<p class="singleProject__decorTitle">Кликфальц</p>
-						</label>
-						<input type="radio" name="decor-in" id="decor-in-3">
-						<label for="decor-in-3" class="singleProject__decorOption">
-							<div class="singleProject__decorImg">
-								<img src="img/dec-in-3.jpg" alt="Образец имитации бруса">
+								<img src="img/dec-in-2.jpg" draggable="false" alt="Образец кликфальца">
 							</div>
 							<p class="singleProject__decorTitle">Имитация бруса</p>
+						</label>
+						<input type="radio" name="decor-in" id="decor-in-3" class="vh">
+						<label for="decor-in-3" class="singleProject__decorOption">
+							<div class="singleProject__decorImg">
+								<img src="img/dec-in-3.jpg" draggable="false" alt="Образец имитации бруса">
+							</div>
+							<p class="singleProject__decorTitle">Вагонка</p>
 						</label>
 					</div>
 				</div>
@@ -172,32 +206,32 @@
 					<div class="singleProject__panel">
 						<div class="singleProject__panelThick">
 							<p class="singleProject__panelCaption">
+								<span class="singleProject__panelType singleProject__panelType--big">FSP M</span>
+								Толщина панелей <strong>200 мм</strong>
+							</p>
+							<p class="singleProject__panelText">Серия FSP M является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+						</div>
+						<div class="singleProject__panelThick">
+							<p class="singleProject__panelCaption">
+								<span class="singleProject__panelType singleProject__panelType--big">FSP M+</span>
+								Толщина панелей <strong>200 мм</strong>
+							</p>
+							<p class="singleProject__panelText">Серия FSP M+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+						</div>
+						<div class="singleProject__panelThick">
+							<p class="singleProject__panelCaption">
+								<span class="singleProject__panelType singleProject__panelType--big">FSP X</span>
+								Толщина панелей <strong>200 мм</strong>
+							</p>
+							<p class="singleProject__panelText">Серия FSP X является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+						</div>
+						<div class="singleProject__panelThick">
+							<p class="singleProject__panelCaption">
 								<span class="singleProject__panelType singleProject__panelType--big">FSP X+</span>
 								Толщина панелей <strong>200 мм</strong>
 							</p>
 							<p class="singleProject__panelText">Серия FSP X+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
 						</div>
-					<!-- 	<div class="singleProject__panelThick">
-							<p class="singleProject__panelCaption">
-								<span class="singleProject__panelType">FSP X+</span>
-								Толщина панелей <strong>200 мм</strong>
-							</p>
-							<p class="singleProject__panelText">Серия FSP X+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
-						</div>
-						<div class="singleProject__panelThick">
-							<p class="singleProject__panelCaption">
-								<span class="singleProject__panelType">FSP X+</span>
-								Толщина панелей <strong>200 мм</strong>
-							</p>
-							<p class="singleProject__panelText">Серия FSP X+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
-						</div>
-						<div class="singleProject__panelThick">
-							<p class="singleProject__panelCaption">
-								<span class="singleProject__panelType">FSP X+</span>
-								Толщина панелей <strong>200 мм</strong>
-							</p>
-							<p class="singleProject__panelText">Серия FSP X+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
-						</div> -->
 					</div>
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Возможно использование серии панелей:</h3>
 					<div class="singleProject__panels">
@@ -437,7 +471,7 @@
 			</ul>
 		</div>
 	</section>
-	<section class="projects">
+	<section class="singleOther projects">
 		<div class="container">
 			<div class="projects__houses">
 				<div class="projects__aside">

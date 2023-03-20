@@ -4,6 +4,10 @@
 	border: 1px solid @blue-border;
 	border-radius: 15px;
 
+	.sm-block({
+		padding: 22px 22px 16px;
+	});
+
 	&__title {
 		font-size: 28px;
 		line-height: 30px;
@@ -17,17 +21,30 @@
 	&__fields {
 		display: flex;
 		width: 100%;
+
+		.sm-block({
+			flex-wrap: wrap;
+		});
 	}
 
 	&__main {
 		width: 100%;
 		max-width: 292px;
+
+		.sm-block({
+			max-width: 100%;
+		});
 	}
 
 	&__additional {
 		width: 100%;
 		max-width: 500px;
 		margin-left: 34px;
+
+		.sm-block({
+			margin-top: 30px;
+			margin-left: 0;
+		});
 	}
 
 	&__label {
@@ -39,6 +56,10 @@
 
 		&:not(:last-child) {
 			margin-bottom: 34px;
+
+			.sm-block({
+				margin-bottom: 12px;
+			});
 		}
 	}
 
@@ -52,6 +73,10 @@
 		border: 1px solid #DADADA;
 		border-radius: 4px;
 
+		.sm-block({
+			max-width: 100%;
+		});
+
 		&::placeholder {
 			color: #ABABAB;
 		}
@@ -62,6 +87,10 @@
 		max-width: 500px;
 		resize: none;
 		height: inherit;
+
+		.sm-block({
+			height: 146px;
+		});
 	}
 
 	&__footer {
@@ -70,6 +99,10 @@
 		align-items: center;
 		margin-top: 26px;
 		text-align: right;
+
+		.sm-block({
+			flex-wrap: wrap-reverse;
+		});
 	}
 
 	&__caption {
@@ -84,5 +117,10 @@
 		font-size: 19px;
 		line-height: 38px;
 		height: 40px;
+
+		.sm-block({
+			width: 100%;
+			margin-bottom: 8px;
+		});
 	}
 }

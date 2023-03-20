@@ -31,4 +31,16 @@
 		margin-top: 26px;
 		text-align: justify;
 	}
+
+	.project {
+		&:nth-child(3n) {
+			.lg-block({
+				display: none;
+			});
+
+			.md-block({
+				display: block;
+			});
+		}
+	}
 }
