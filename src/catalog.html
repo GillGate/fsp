@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="container header__wrapper">
+			<div class="header__logo">
+				<div class="header__logoImg">
+					<img src="img/header-logo.png" alt="">
+				</div>
+				<span class="header__logoText">Строим с 2008</span>
+			</div>
+			<div class="header__nav">
+				<div class="header__bar"><span></span></div>
+				<nav class="nav header__navBody">
+					<a href="#" class="nav__link">О компании</a>
+					<a href="#" class="nav__link">О технологии FSP</a>
+					<a href="#" class="nav__link">Каталог проектов</a>
+					<a href="#" class="nav__link">Услуги</a>
+					<a href="#" class="nav__link">Контакты</a>
+				</nav>
+			</div>	
+			<div class="header__contact">
+				<a href="tel:+79808006012" class="header__contactPhone">+7 (980) 800-60-12</a>
+				<button class="button header__contactOrder">Заказать звонок</button>
+			</div>
+		</div>
+	</header>
+	<div class="breadcrumbs">
+		<div class="container breadcrumbs__wrapper">
+			<a href="/">Главная</a>
+			<a>Проекты домов</a>
+		</div>
+	</div>
+
+	<section class="page catalog">
+		<div class="container">
+			<h1 class="title page__title">Проекты домов</h1>
+			<div class="page__content"><p><strong>A-Frame</strong> - это архитектурный стиль, который получил свое название благодаря форме крыши, напоминающей букву "А". Такой дом отличается простой и компактной формой, что позволяет сэкономить место и средства на строительство. Внутри такого дома можно создать уютную и комфортную обстановку. Несмотря на небольшой размер, A-Frame дома могут содержать все необходимые удобства для проживания - спальню, ванную комнату... </p></div>
+			<div class="catalog__wrapper">
+				<aside class="catalog__aside">
+					<button class="catalog__toggleFilter">
+						<span>Фильтровать по хар-кам</span>
+					</button>
+					<form method="GET" class="filter">
+						<h2 class="filter__title">Фильтр</h2>
+						<label class="filter__label">
+							<span class="filter__caption">Форма</span>
+							<select class="filter__select" name="filter-shape" id="">
+								<option value="any">Любая</option>
+								<option value="a-frame">A-Frame</option>
+								<option value="barnhouse">Барнхаус</option>
+							</select>
+						</label>
+						<label class="filter__label">
+							<span class="filter__caption">Размеры в м²</span>
+							<div class="filter__range filter__range--square">
+								<div class="filter__rangeSlider"></div>
+								<div class="filter__rangeInfo">
+									<p class="filter__rangeCaption filter__rangeMin"><span class="filter__caption">от</span> <strong>20</strong> м²</p>
+									<p class="filter__rangeCaption filter__rangeMax"><span class="filter__caption">до</span> <strong>200</strong> м²</p>
+									<input type="hidden" name="filter-square-min" value="20">
+									<input type="hidden" name="filter-square-max" value="200">
+								</div>
+							</div>
+						</label>
+						<label class="filter__label">
+							<span class="filter__caption">Высота в коньке</span>
+							<div class="filter__range filter__range--height">
+								<div class="filter__rangeSlider"></div>
+								<div class="filter__rangeInfo">
+									<p class="filter__rangeCaption filter__rangeMin"><span class="filter__caption">от</span> <strong>2</strong> м</p>
+									<p class="filter__rangeCaption filter__rangeMax"><span class="filter__caption">до</span> <strong>6</strong> м</p>
+									<input type="hidden" name="filter-height-min" value="2">
+									<input type="hidden" name="filter-height-max" value="6">
+								</div>
+							</div>
+						</label>
+						<label class="filter__label">
+							<span class="filter__caption">Этажность</span>
+							<div class="filter__range filter__range--floor">
+								<div class="filter__rangeSlider"></div>
+								<div class="filter__rangeInfo">
+									<p class="filter__rangeCaption filter__rangeMin"><span class="filter__caption">от</span> <strong>1</strong></p>
+									<p class="filter__rangeCaption filter__rangeMax"><span class="filter__caption">до</span> <strong>4</strong></p>
+									<input type="hidden" name="filter-floor-min" value="1">
+									<input type="hidden" name="filter-floor-max" value="4">
+								</div>
+							</div>
+						</label>
+						<div class="filter__fits">
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" value="const" class="vh">
+								<span>Постоянное проживание</span>
+							</label>
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" value="buss" class="vh">
+								<span>Бизнес под аренду</span>
+							</label>
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" class="vh">
+								<span>Массовая застройка</span>
+							</label>
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" class="vh">
+								<span>Гэмплинг</span>
+							</label>
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" class="vh">
+								<span>Дачный дом</span>
+							</label>
+							<label class="filter__fitsItem">
+								<input type="checkbox" name="filter-fits" class="vh">
+								<span>Гостевой дом</span>
+							</label>
+						</div>
+						<button type="submit" class="button filter__submit">Поиск</button>
+					</form>
+				</aside>
+				<section class="catalog__main">
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="project">
+						<div class="project__head">
+							<div class="project__img">
+								<img src="img/popular-example.jpg" alt="">
+							</div>
+							<div class="project__props">
+								<span class="project__prop">11x8 м</span>
+								<span class="project__prop project__prop--square">102 м²</span>
+							</div>
+						</div>
+						<div class="project__info">
+							<h3 class="project__title">FSP-Barn 100</h3>
+							<p class="project__price">от 423 000 ₽</p>
+						</div>
+					</a>
+				</section>
+			</div>
+		</div>
+	</section>
+	
+	<div class="backTop">
+		<a href="#header" class="button navLink backTop__button">Перейти в начало сайта</a>
+	</div>
+	<footer class="footer">
+		<div class="container footer__wrapper">
+			<div class="footer__body">
+				<div class="footer__company">
+					<div class="footer__companyLogo">
+						<img src="img/logo-white.png" alt="">
+					</div>
+					<p class="footer__companyText">
+						Производство и установка <br>
+						домокомплектов <br>
+						по FSP - Технологии
+					</p>
+				</div>
+				<div class="footer__nav">
+					<a href="#" class="footer__navLink">О компании</a>
+					<a href="#" class="footer__navLink">Каталог проектов</a>
+					<a href="#" class="footer__navLink">О технологии FSP</a>
+					<a href="#" class="footer__navLink">Услуги</a>
+					<a href="#" class="footer__navLink">Контакты</a>
+				</div>
+				<!-- <div class="footer__social">
+					<p class="footer__caption">Наши соц. сети</p>
+					<div class="footer__socialList"></div>
+				</div> -->
+				<div class="footer__contacts">
+					<div class="footer__contact">
+						<p class="footer__caption">Телефон</p>
+						<a href="tel:+79057963117">+7 905 796 31 17</a>
+						<a href="tel:+79057963117">+7 905 796 31 17</a>
+					</div>
+					<div class="footer__contact">
+						<p class="footer__caption">Адрес</p>
+						<address class="footer__address">
+							г. Можайск , ул. Бородинская, <br>
+							дом 37А, офис 1
+						</address>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<span>.</span>
+				<p class="footer__bottomText">© Реконстрой Групп - 2023</p>
+				<a href="#" class="footer__policy">Политика конфиденциальности</a>
+			</div>
+		</div>
+	</footer>
+	<script src="js/all.js"></script>
+</body>
+</html>

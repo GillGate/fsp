@@ -1,5 +1,6 @@
 $(function(){
 	let clWidth = document.documentElement.clientWidth;
+	let getQuery = getQueryParams(document.location.search);
 
 	let $links = $('.navLink');
 	$links.on('click', function(e) {
@@ -67,4 +68,113 @@ $(function(){
 		asNavFor: ".singleProject__panel",
 		focusOnSelect: true
 	});
+
+	$('.catalog__toggleFilter').on("click", function() {
+		const $toggleBtn = $(this);
+		const $filter = $('.filter');
+
+		if($toggleBtn.hasClass('catalog__toggleFilter--open')) {
+			$toggleBtn.removeClass('catalog__toggleFilter--open');
+			$toggleBtn.children("span").text("Фильтровать по хар-кам");
+			$filter.slideUp(500);
+		}
+		else {
+			$toggleBtn.addClass('catalog__toggleFilter--open');
+			$toggleBtn.children("span").text("Закрыть фильтр");
+			$filter.slideDown(500);
+		}
+	});
+
+	let filterSquareValues = [
+		getQuery["filter-square-min"] ?? '20',
+		getQuery["filter-square-max"] ?? '200'
+	];
+
+	$('.filter__range--square .filter__rangeSlider').slider({
+		range: true,
+		min: 20,
+		max: 200,
+		values: filterSquareValues,
+		create: function(event, ui) {
+			$('.filter__range--square .filter__rangeMin strong').text(filterSquareValues[0]);
+			$('.filter__range--square .filter__rangeMax strong').text(filterSquareValues[1]);
+
+			$('input[name=filter-square-min]').val(filterSquareValues[0]);
+			$('input[name=filter-square-max]').val(filterSquareValues[1]);
+		},
+		slide: function(event, ui) {
+			$('.filter__range--square .filter__rangeMin strong').text(ui.values[0]);
+			$('.filter__range--square .filter__rangeMax strong').text(ui.values[1]);
+
+			$('input[name=filter-square-min]').val(ui.values[0]);
+			$('input[name=filter-square-max]').val(ui.values[1]);
+		}
+	});
+
+	let filterHeightValues = [
+		getQuery["filter-height-min"] ?? '2',
+		getQuery["filter-height-max"] ?? '6'
+	];
+
+	$('.filter__range--height .filter__rangeSlider').slider({
+		range: true,
+		min: 2,
+		max: 6,
+		values: filterHeightValues,
+		create: function(event, ui) {
+			$('.filter__range--height .filter__rangeMin strong').text(filterHeightValues[0]);
+			$('.filter__range--height .filter__rangeMax strong').text(filterHeightValues[1]);
+
+			$('input[name=filter-height-min]').val(filterHeightValues[0]);
+			$('input[name=filter-height-max]').val(filterHeightValues[1]);
+		},
+		slide: function(event, ui) {
+			$('.filter__range--height .filter__rangeMin strong').text(ui.values[0]);
+			$('.filter__range--height .filter__rangeMax strong').text(ui.values[1]);
+
+			$('input[name=filter-height-min]').val(ui.values[0]);
+			$('input[name=filter-height-max]').val(ui.values[1]);
+		}
+	});
+
+	let filterFloorValues = [
+		getQuery["filter-floor-min"] ?? '1',
+		getQuery["filter-floor-max"] ?? '4'
+	];
+
+	$('.filter__range--floor .filter__rangeSlider').slider({
+		range: true,
+		min: 1,
+		max: 4,
+		values: filterFloorValues,
+		create: function(event, ui) {
+			$('.filter__range--floor .filter__rangeMin strong').text(filterFloorValues[0]);
+			$('.filter__range--floor .filter__rangeMax strong').text(filterFloorValues[1]);
+
+			$('input[name=filter-floor-min]').val(filterFloorValues[0]);
+			$('input[name=filter-floor-max]').val(filterFloorValues[1]);
+		},
+		slide: function(event, ui) {
+			$('.filter__range--floor .filter__rangeMin strong').text(ui.values[0]);
+			$('.filter__range--floor .filter__rangeMax strong').text(ui.values[1]);
+
+			$('input[name=filter-floor-min]').val(ui.values[0]);
+			$('input[name=filter-floor-max]').val(ui.values[1]);
+		}
+	});
+
+
+	function getQueryParams(qs) {
+	    qs = qs.split('+').join(' ');
+
+	    var params = {},
+	        tokens,
+	        re = /[?&]?([^=]+)=([^&]*)/g;
+
+	    while (tokens = re.exec(qs)) {
+	        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+	    }
+
+	    return params;
+	}
 });
