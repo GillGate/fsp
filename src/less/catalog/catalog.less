@@ -23,9 +23,12 @@
 	}
 
 	&__main {
+		width: 100%;
+	}
+
+	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
 
 		.project {
 			.col();
@@ -60,5 +63,34 @@
 				background: url(../img/icon-filter.svg) no-repeat center / contain;
 			}
 		}
+	}
+
+	&__pagination {
+		display: flex;
+		justify-content: center;
+		margin: 30px auto 0;
+		color: #d90000;
+		font-size: 20px;
+		line-height: 46px;
+
+		span {
+			color: #1e1f20;
+		}
+
+		.page-numbers {
+			margin: 0 4px;
+		}
+
+		.current {
+			text-decoration: underline;
+		}
+
+		.prev, .next {
+			display: none;
+		}
+	}
+
+	&__nonResidential {
+		margin-bottom: 100px;
 	}
 }

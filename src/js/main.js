@@ -86,13 +86,13 @@ $(function(){
 	});
 
 	let filterSquareValues = [
-		getQuery["filter-square-min"] ?? '20',
+		getQuery["filter-square-min"] ?? '10',
 		getQuery["filter-square-max"] ?? '200'
 	];
 
 	$('.filter__range--square .filter__rangeSlider').slider({
 		range: true,
-		min: 20,
+		min: 10,
 		max: 200,
 		values: filterSquareValues,
 		create: function(event, ui) {
@@ -112,14 +112,14 @@ $(function(){
 	});
 
 	let filterHeightValues = [
-		getQuery["filter-height-min"] ?? '2',
-		getQuery["filter-height-max"] ?? '6'
+		getQuery["filter-height-min"] ?? '0',
+		getQuery["filter-height-max"] ?? '8'
 	];
 
 	$('.filter__range--height .filter__rangeSlider').slider({
 		range: true,
-		min: 2,
-		max: 6,
+		min: 0,
+		max: 8,
 		values: filterHeightValues,
 		create: function(event, ui) {
 			$('.filter__range--height .filter__rangeMin strong').text(filterHeightValues[0]);
@@ -163,6 +163,18 @@ $(function(){
 		}
 	});
 
+	$('.filter').on('submit', function(e) {
+		let path = (window.location.href).split('?')[0];
+		path = path.replace(/\/page\/[2-9]\//, '/page/1/');
+
+		let formData = new FormData(document.forms[0]);
+		let search = new URLSearchParams(formData);
+		let query = search.toString();
+		
+		e.preventDefault();
+		
+		window.location.replace(`${path}?${query}`);
+	});
 
 	function getQueryParams(qs) {
 	    qs = qs.split('+').join(' ');
