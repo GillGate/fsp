@@ -146,7 +146,9 @@ const js = (done) => {
    
     let jsArray = [
         'src/js/jquery-3.3.1.min.js',
+        'src/js/jquery-ui.min.js',
         'src/js/slick.min.js',
+        'src/js/fancybox.min.js',
         'src/js/main.js'
     ];
 

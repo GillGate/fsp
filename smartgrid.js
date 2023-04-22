@@ -4,7 +4,7 @@ const settings = {
     columns: 12,
     offset: '30px',
     container: {
-        maxWidth: '1240px',
+        maxWidth: '1310px',
         fields: '60px'
     },
     breakPoints: {
@@ -20,7 +20,7 @@ const settings = {
             fields: "15px"
         },
         xs: {
-            width: "560px",
+            width: "600px",
         }
     },
     oldSizeStyle: false,

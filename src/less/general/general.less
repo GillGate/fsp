@@ -161,3 +161,40 @@ ul, ol {
 		}
 	}
 }
+
+
+.notFound {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: calc(100vh - (92px + 348px));
+	font-size: 20px;
+	line-height: 36px;
+
+	.xs-block({
+		min-height: 400px;
+	});
+
+	&__error {
+		font-size: 100px;
+		line-height: 150px;
+		font-weight: 700;
+
+		.xs-block({
+			font-size: 50px;
+			line-height: 72px;
+		});
+	}
+
+	&__button {
+		height: 46px;
+		font-size: 20px;
+	    line-height: 44px;
+		padding: 0 20px;
+		margin-top: 30px;
+
+		.xs-block({
+			font-size: 16px;
+		});
+	}
+}

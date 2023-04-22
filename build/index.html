@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Главная</title>
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
 </head>
 <body>
 	<header id="header" class="header">
@@ -20,15 +21,24 @@
 				<nav class="nav header__navBody">
 					<a href="#" class="nav__link">О компании</a>
 					<a href="#" class="nav__link">О технологии FSP</a>
-					<a href="catalog.html" class="nav__link">Каталог проектов</a>
+					<div href="catalog.html" class="nav__link nav__link--nested">
+						<a href="catalog.html">Каталог проектов</a>
+						<div class="nav__linkNested">
+							<a href="#" class="nav__link">Проекты домов</a>
+							<a href="#" class="nav__link">Проекты нежелых помещений</a>
+						</div>
+					</div>
 					<a href="#" class="nav__link">Услуги</a>
 					<a href="#" class="nav__link">Контакты</a>
 				</nav>
 			</div>	
 			<div class="header__contact">
 				<a href="tel:+79808006012" class="header__contactPhone">+7 (980) 800-60-12</a>
-				<button class="button header__contactOrder">Заказать звонок</button>
+				<button class="button header__contactOrder" data-fancybox="dialog" data-src="#order-call">Заказать звонок</button>
 			</div>
+<!-- 			<div class="order" id="order-call">
+				asdasd
+			</div> -->
 		</div>
 	</header>
 	<section class="intro">

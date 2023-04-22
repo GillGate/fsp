@@ -69,6 +69,16 @@ $(function(){
 		focusOnSelect: true
 	});
 
+	$('.singleProject__descMore').on("click", function() {
+		let el = $('.singleProject__desc');
+	    curHeight = el.height();
+	    autoHeight = el.css('height', 'auto').height();
+
+		el.height(curHeight).animate({height: autoHeight}, 300, 'linear');
+
+		$(this).slideUp(300);
+	});
+
 	$('.catalog__toggleFilter').on("click", function() {
 		const $toggleBtn = $(this);
 		const $filter = $('.filter');
@@ -87,13 +97,13 @@ $(function(){
 
 	let filterSquareValues = [
 		getQuery["filter-square-min"] ?? '10',
-		getQuery["filter-square-max"] ?? '200'
+		getQuery["filter-square-max"] ?? '300'
 	];
 
 	$('.filter__range--square .filter__rangeSlider').slider({
 		range: true,
 		min: 10,
-		max: 200,
+		max: 300,
 		values: filterSquareValues,
 		create: function(event, ui) {
 			$('.filter__range--square .filter__rangeMin strong').text(filterSquareValues[0]);
@@ -163,13 +173,20 @@ $(function(){
 		}
 	});
 
-	$('.filter').on('submit', function(e) {
+	$('.singleProject__order').on('click', function() {
+		$('input[name=order-project]').val($('.singleProject__title').text());
+		$('input[name=order-decor-ext]').val($('input[name=decor-ext]:checked').val());
+		$('input[name=order-decor-in]').val($('input[name=decor-in]:checked').val());
+	});
+
+	$('#filter').on('submit', function(e) {
 		let path = (window.location.href).split('?')[0];
 		path = path.replace(/\/page\/[2-9]\//, '/page/1/');
 
-		let formData = new FormData(document.forms[0]);
-		let search = new URLSearchParams(formData);
-		let query = search.toString();
+		// let formData = new FormData(document.forms[0]);
+		// let search = new URLSearchParams(formData);
+		// let query = search.toString();
+		let query = $(this).serialize();
 		
 		e.preventDefault();
 		
