@@ -49,14 +49,15 @@
 		'supports'            => [ 'title', 'editor', 'thumbnail']
 	] );
 
-	function getCatalog($count = 7, $purpose = 'residential') {
+	function getCatalog($count = 7, $purpose = 'residential', $style = '') {
 		$args = [
 			'post_type'   => 'project',
 			'orderby'     => 'date',
 			'order'       => 'desc',
 			'numberposts' => $count,
 			'purpose'	  => $purpose,
-			'meta_key' => 'project-popular',
+			'style' 	  => $style,
+			'meta_key'    => 'project-popular',
 		];
 
 		$catalog = [];

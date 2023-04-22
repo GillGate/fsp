@@ -2,6 +2,8 @@
 <?php
 	$post_id = get_the_ID();
 	$current_post = get_fields();
+	$purpose = wp_get_object_terms($post_id, 'purpose')[0];
+	$style = wp_get_object_terms($post_id, 'style')[0];
 ?>
 	<div class="breadcrumbs">
 		<div class="container breadcrumbs__wrapper">
@@ -14,40 +16,27 @@
 		<div class="container">
 			<h1 class="title singleProject__title"><?php the_title(); ?></h1>
 			<div class="singleProject__main">
+				<?php  $images = acf_photo_gallery('project-gallery', $post_id); ?>
 				<div class="singleProject__slider">
 					<div class="singleProject__sliderMain">
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/house.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/house.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
+						<?php  if( count($images) ) { 
+							foreach($images as $image) { ?>
+								<div>
+									<img src="<?php echo $image['full_image_url']; ?>" alt="">
+								</div>
+						<?php } } else { ?>
+							<div>
+								<?php the_post_thumbnail(); ?>
+							</div>
+						<?php } ?>
 					</div>
 					<div class="singleProject__sliderNav">
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
-						</div>
-						<div>
-							<img src="<?php echo IMG_DIR ;?>/singleProject-slider-img.jpg" alt="">
-						</div>
+						<?php  if( count($images) ) { 
+							foreach($images as $image) { ?>
+								<div>
+									<img src="<?php echo $image['full_image_url']; ?>" alt="">
+								</div>
+						<?php } } ?>
 					</div>
 				</div>
 				<h2 class="vh">Подробнее</h2>
@@ -113,20 +102,20 @@
 								</li>
 							<?php } ?>
 						</ul>
-						<button class="button singleProject__order">Заказать проект</button>
+						<button class="button singleProject__order" data-fancybox data-src="#order-call">Заказать проект</button>
 					</div>
 					<div class="singleProject__section singleProject__section--desc">
 						<h3 class="singleProject__sectionTitle">Описание:</h3>
 						<div class="singleProject__desc">
-							<strong>A-Frame</strong> - это архитектурный стиль, который получил свое название благодаря форме крыши, напоминающей букву "А". Такой дом отличается простой и компактной формой, что позволяет сэкономить место и средства на строительство. Внутри такого дома можно создать уютную и комфортную обстановку. Несмотря на небольшой размер, A-Frame дома могут содержать все необходимые удобства для проживания - спальню, ванную комнату... 
-							<button class="singleProject__descMore">Полное описание</button>
+							<?php wpautop(the_content()); ?>
 						</div>
+						<button class="singleProject__descMore">Полное описание</button>
 					</div>
 					<div class="singleProject__section singleProject__section--options">
 						<div class="singleProject__options">
 							<a href="#" class="singleProject__option">Беспроцентная рассрочка до 1 года!</a>
-							<a href="#" class="singleProject__option">В кредит - от 5.5% </a>
-							<a href="#" class="singleProject__option">Скидка 10% при заказе от 2х</a>
+							<a href="#" class="singleProject__option singleProject__option--second">В кредит - от 5.5% </a>
+							<a href="#" class="singleProject__option singleProject__option--third">Скидка 10% при заказе от 2х</a>
 						</div>
 					</div>
 				</div>
@@ -135,21 +124,21 @@
 				<div class="singleProject__section singleProject__section--decor">
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Варианты внешней отделки (любой цвет):</h3>
 					<div class="singleProject__decor">
-						<input type="radio" name="decor-ext" id="decor-ext-1" class="vh" checked>
+						<input type="radio" name="decor-ext" id="decor-ext-1" class="vh" value="Профлист" checked>
 						<label for="decor-ext-1" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-ext-1.jpg" draggable="false" alt="Образец профлиста">
 							</div>
 							<p class="singleProject__decorTitle">Профлист</p>
 						</label>
-						<input type="radio" name="decor-ext" id="decor-ext-2" class="vh">
+						<input type="radio" name="decor-ext" id="decor-ext-2" value="Кликфальц" class="vh">
 						<label for="decor-ext-2" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-ext-2.jpg" draggable="false" alt="Образец кликфальца">
 							</div>
 							<p class="singleProject__decorTitle">Кликфальц</p>
 						</label>
-						<input type="radio" name="decor-ext" id="decor-ext-3" class="vh">
+						<input type="radio" name="decor-ext" id="decor-ext-3" value="Имитация бруса" class="vh">
 						<label for="decor-ext-3" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-ext-3.jpg" draggable="false" alt="Образец имитации бруса">
@@ -159,21 +148,21 @@
 					</div>
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Варианты внутренней отделки (любой цвет):</h3>
 					<div class="singleProject__decor">
-						<input type="radio" name="decor-in" id="decor-in-1" class="vh" checked>
+						<input type="radio" name="decor-in" id="decor-in-1" class="vh" value="Плитка" checked>
 						<label for="decor-in-1" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-in-1.jpg" draggable="false" alt="Образец профлиста">
 							</div>
 							<p class="singleProject__decorTitle">Плитка</p>
 						</label>
-						<input type="radio" name="decor-in" id="decor-in-2" class="vh">
+						<input type="radio" name="decor-in" id="decor-in-2" value="Имитация бруса" class="vh">
 						<label for="decor-in-2" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-in-2.jpg" draggable="false" alt="Образец кликфальца">
 							</div>
 							<p class="singleProject__decorTitle">Имитация бруса</p>
 						</label>
-						<input type="radio" name="decor-in" id="decor-in-3" class="vh">
+						<input type="radio" name="decor-in" id="decor-in-3" value="Вагонка" class="vh">
 						<label for="decor-in-3" class="singleProject__decorOption">
 							<div class="singleProject__decorImg">
 								<img src="<?php echo IMG_DIR ;?>/dec-in-3.jpg" draggable="false" alt="Образец имитации бруса">
@@ -188,30 +177,31 @@
 						<div class="singleProject__panelThick">
 							<p class="singleProject__panelCaption">
 								<span class="singleProject__panelType singleProject__panelType--big">FSP M</span>
-								Толщина панелей <strong>200 мм</strong>
+								Толщина панелей <strong>150 мм</strong>
 							</p>
-							<p class="singleProject__panelText">Серия FSP M является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+							<p class="singleProject__panelText">Без теплоизоляции; является универсальным решением и подходит для строений сезонного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
 						</div>
 						<div class="singleProject__panelThick">
 							<p class="singleProject__panelCaption">
 								<span class="singleProject__panelType singleProject__panelType--big">FSP M+</span>
-								Толщина панелей <strong>200 мм</strong>
+								Толщина панелей <strong>150 мм</strong>
 							</p>
-							<p class="singleProject__panelText">Серия FSP M+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+							<p class="singleProject__panelText">С теплоизоляцией 150 мм на основе базальта; является универсальным решением и подходит для строений сезонного и постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.
+</p>
 						</div>
 						<div class="singleProject__panelThick">
 							<p class="singleProject__panelCaption">
 								<span class="singleProject__panelType singleProject__panelType--big">FSP X</span>
 								Толщина панелей <strong>200 мм</strong>
 							</p>
-							<p class="singleProject__panelText">Серия FSP X является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+							<p class="singleProject__panelText">Без теплоизоляции; является универсальным решением и подходит для строений сезонного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
 						</div>
 						<div class="singleProject__panelThick">
 							<p class="singleProject__panelCaption">
 								<span class="singleProject__panelType singleProject__panelType--big">FSP X+</span>
 								Толщина панелей <strong>200 мм</strong>
 							</p>
-							<p class="singleProject__panelText">Серия FSP X+ является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
+							<p class="singleProject__panelText">С теплоизоляцией 200 мм на основе базальта; является самой тёплой и подходит для коттеджей/домов предназначенныx для постоянного проживания, а также бань, дачных домов, складов/ангаров и других строений.</p>
 						</div>
 					</div>
 					<h3 class="singleProject__sectionTitle singleProject__sectionTitle--black">Возможно использование серии панелей:</h3>
@@ -288,70 +278,27 @@
 					<div class="projects__offer">
 						<h4 class="projects__offerTitle">Индивидуальное проектирование</h4>
 						<p class="projects__offerCaption">Мы готовы разработать индивидуальный проект по вашему заказу!</p>
-						<button class="button projects__offerBtn">Получить предложение</button>
+						<button class="button projects__offerBtn" data-fancybox data-src="#order-call">Получить предложение</button>
 					</div>
 				</div>
 				<div class="projects__list">
-					<a href="#" class="project">
+					<?php foreach(getCatalog(4, $purpose->slug, $style->slug) as $project) { ?>
+					<a href="<?php echo $project['project-link']; ?>" class="project">
 						<div class="project__head">
 							<div class="project__img">
-								<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
+								<?php echo $project['project-img']; ?>
 							</div>
 							<div class="project__props">
-								<span class="project__prop">11x8 м</span>
-								<span class="project__prop project__prop--square">102 м²</span>
+								<span class="project__prop"><?php echo $project['project-props']['size']; ?> м</span>
+								<span class="project__prop project__prop--square"><?php echo $project['project-props']['square']; ?> м²</span>
 							</div>
 						</div>
 						<div class="project__info">
-							<h3 class="project__title">FSP-Barn 100</h3>
-							<p class="project__price">от 423 000 ₽</p>
+							<h3 class="project__title"><?php echo $project['project-title']; ?></h3>
+							<p class="project__price">от <?php echo $project['project-price']['main']; ?> ₽</p>
 						</div>
 					</a>
-					<a href="#" class="project">
-						<div class="project__head">
-							<div class="project__img">
-								<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
-							</div>
-							<div class="project__props">
-								<span class="project__prop">11x8 м</span>
-								<span class="project__prop project__prop--square">102 м²</span>
-							</div>
-						</div>
-						<div class="project__info">
-							<h3 class="project__title">FSP-Barn 100</h3>
-							<p class="project__price">от 423 000 ₽</p>
-						</div>
-					</a>
-					<a href="#" class="project">
-						<div class="project__head">
-							<div class="project__img">
-								<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
-							</div>
-							<div class="project__props">
-								<span class="project__prop">11x8 м</span>
-								<span class="project__prop project__prop--square">102 м²</span>
-							</div>
-						</div>
-						<div class="project__info">
-							<h3 class="project__title">FSP-Barn 100</h3>
-							<p class="project__price">от 423 000 ₽</p>
-						</div>
-					</a>
-					<a href="#" class="project">
-						<div class="project__head">
-							<div class="project__img">
-								<img src="<?php echo IMG_DIR ;?>/popular-example.jpg" alt="">
-							</div>
-							<div class="project__props">
-								<span class="project__prop">11x8 м</span>
-								<span class="project__prop project__prop--square">102 м²</span>
-							</div>
-						</div>
-						<div class="project__info">
-							<h3 class="project__title">FSP-Barn 100</h3>
-							<p class="project__price">от 423 000 ₽</p>
-						</div>
-					</a>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

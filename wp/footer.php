@@ -25,8 +25,8 @@
 				<div class="footer__contacts">
 					<div class="footer__contact">
 						<p class="footer__caption">Телефон</p>
-						<a href="tel:+79057963117">+7 905 796 31 17</a>
-						<a href="tel:+79057963117">+7 905 796 31 17</a>
+						<a href="tel:+79057963117">+7 (980) 800-60-12</a>
+						
 					</div>
 					<div class="footer__contact">
 						<p class="footer__caption">Адрес</p>

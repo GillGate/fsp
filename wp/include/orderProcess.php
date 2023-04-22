@@ -1,4 +1,4 @@
-<section class="orderProcess orderProcess--current">
+<section class="orderProcess orderProcess--current" id="order">
 	<div class="container orderProcess__wrapper">
 		<h2 class="title orderProcess__title">
 			Этапы сотрудничества
@@ -10,7 +10,7 @@
 						<img src="<?php echo IMG_DIR ;?>/process-2.png" alt="">
 					</div>
 					<h3 class="orderProcess__title">
-						<a href="#">Свяжитесь</a> <br>
+						<strong>Свяжитесь</strong> <br>
 						с нашим <br>
 						специалистом
 					</h3>
@@ -47,33 +47,7 @@
 			</ol>
 			<div class="form orderProcess__form">
 				<h3 class="title form__title">Оформите заявку прямо сейчас!</h3>
-				<form class="form__body">
-					<div class="form__fields">
-						<div class="form__main">
-							<label class="form__label">
-								<input class="form__input" type="text" maxlength="70" name="order-name" placeholder="Имя">
-							</label>
-							<label class="form__label">
-								<input class="form__input" type="tel" maxlength="12" name="order-phone" placeholder="Телефон">
-							</label>
-							<label class="form__label">
-								<input class="form__input" type="email" maxlength="50" name="order-email" placeholder="Эл. почта">
-							</label>
-						</div>
-						<div class="form__additional">
-							<label class="form__label form__label--textarea">
-								<textarea class="form__input form__textarea" maxlength="500" name="order-more" placeholder="Дополнительная информация..."></textarea>
-							</label>
-						</div>
-					</div>
-					<div class="form__footer">
-						<p class="form__caption">
-							Нажимая на кнопку, я соглашаюсь с политикой <br>
-							обработки персональных данных.
-						</p>
-						<button class="button form__submit">Отправить</button>
-					</div>
-				</form>
+				<?php get_template_part('include/form') ?>
 			</div>
 		</div>
 	</div>

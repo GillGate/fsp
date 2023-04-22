@@ -7,8 +7,8 @@
 			<h2 class="title discount__title"><strong>Скидка 10%</strong> на отделочные работы</h2>
 			<p class="titleCaption discount__caption">При заказе домов с использованием панелей серии “М+” и “X+”</p>
 			<div class="discount__actions">
-				<a href="#" class="button discount__get">Получить  предложение</a>
-				<a href="#" class="discount__more">Подробнее о видах FSP-панелей</a>
+				<button data-fancybox data-src="#order-call" class="button discount__get">Получить  предложение</button>
+				<a href="/technology/" class="discount__more">Подробнее о видах FSP-панелей</a>
 			</div>
 		</div>
 	</div>

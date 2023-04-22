@@ -19,7 +19,7 @@
 					<img src="<?php echo IMG_DIR ;?>/process-2.png" alt="">
 				</div>
 				<h3 class="orderProcess__title">
-					<a href="/contacts/">Свяжитесь</a> <br>
+					<a data-fancybox data-src="#order-call">Свяжитесь</a> <br>
 					с нашим <br>
 					специалистом
 				</h3>

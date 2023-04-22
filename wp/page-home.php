@@ -19,13 +19,13 @@
 					</div>
 					<div class="intro__sliderInfo">
 						<span class="intro__sliderGost">ГОСТ <strong>27751-2014</strong></span>
-						<h3 class="title intro__sliderTitle">Эко-дом из FSP-панелей “FSP-Barn 38”</h3>
+						<h3 class="title intro__sliderTitle">Эко-дом из FSP-панелей “Barn House 3.5х6”</h3>
 						<ul class="intro__sliderList">
 							<li>Применение современных технологий</li>
 							<li>Простота и надежность конструкции</li>
 							<li>Срок службы более 30 лет</li>
 						</ul>
-						<p class="intro__sliderPrice">от <span>399 000 ₽</span></p>
+						<p class="intro__sliderPrice">от <span>480 000 ₽</span></p>
 						<div class="intro__offer">
 							<div class="intro__offerImg">
 								<img src="<?php echo IMG_DIR ;?>/window.png" alt="">
@@ -34,7 +34,7 @@
 								<strong>Окна в подарок</strong> при заказе “под ключ”
 							</p>
 						</div>
-						<a href="/project/proekt-fsp-af1/" class="button intro__sliderMore">Подробнее</a>
+						<a href="/project/barn-house-3-5h6-s-mansardoj/" class="button intro__sliderMore">Подробнее</a>
 					</div>
 				</div>
 			</div>
@@ -66,7 +66,7 @@
 					<div class="projects__offer">
 						<h4 class="projects__offerTitle">Индивидуальное проектирование</h4>
 						<p class="projects__offerCaption">Мы готовы разработать индивидуальный проект по вашему заказу!</p>
-						<button class="button projects__offerBtn">Получить предложение</button>
+						<button class="button projects__offerBtn" data-fancybox data-src="#order-call">Получить предложение</button>
 					</div>
 				</div>
 				<div class="projects__list">

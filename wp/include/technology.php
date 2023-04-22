@@ -23,7 +23,7 @@
 			<ul class="technology__exampleProps">
 				<li class="technology__exampleProp">
 					<strong>Калиброванная доска камерной сушки</strong>
-					Высококачественый материал, бработанный огнебиозащитой 
+					Высококачественый материал, обработанный огнебиозащитой 
 				</li>
 				<li class="technology__exampleProp">
 					<strong>Каменная базальтовая плита</strong>
@@ -31,7 +31,7 @@
 				</li>
 				<li class="technology__exampleProp">
 					<strong>Пароизоляционная мембрана</strong>
-					Качественная мембрана обеспечивает  надежную влагозащиту 
+					Качественная мембрана обеспечивает надежную влагозащиту 
 				</li>
 				<li class="technology__exampleProp">
 					<strong>Отделка</strong>

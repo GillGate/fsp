@@ -1,0 +1,26 @@
+.form__label {
+	position: relative;
+}
+
+.form__footer {
+	align-content: center;
+}
+
+.wpcf7-not-valid-tip {
+	font-size: 14px;
+	padding: 0 6px;
+	display: block;
+	position: absolute;
+	bottom: -26px;
+	left: 0;
+	right: 0;
+}
+
+.header__order {
+	display: none;
+	max-width: 750px !important;
+}
+
+.wpcf7-spinner {
+	display: none;
+}

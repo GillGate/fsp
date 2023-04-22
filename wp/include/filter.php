@@ -2,7 +2,7 @@
 	<button class="catalog__toggleFilter">
 		<span>Фильтровать по хар-кам</span>
 	</button>
-	<form method="GET" class="filter">
+	<form method="get" class="filter" id="filter">
 		<?php 
 			$styles = get_terms(['taxonomy' => 'style']);
 			$fits = get_terms(['taxonomy' => 'fits']);
@@ -32,9 +32,9 @@
 				<div class="filter__rangeSlider"></div>
 				<div class="filter__rangeInfo">
 					<p class="filter__rangeCaption filter__rangeMin"><span class="filter__caption">от</span> <strong>10</strong> м²</p>
-					<p class="filter__rangeCaption filter__rangeMax"><span class="filter__caption">до</span> <strong>200</strong> м²</p>
+					<p class="filter__rangeCaption filter__rangeMax"><span class="filter__caption">до</span> <strong>300</strong> м²</p>
 					<input type="hidden" name="filter-square-min" value="10">
-					<input type="hidden" name="filter-square-max" value="200">
+					<input type="hidden" name="filter-square-max" value="300">
 				</div>
 			</div>
 		</label>
